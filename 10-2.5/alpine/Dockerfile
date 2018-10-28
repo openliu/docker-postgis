@@ -63,3 +63,8 @@ RUN set -ex \
 
 COPY ./initdb-postgis.sh /docker-entrypoint-initdb.d/postgis.sh
 COPY ./update-postgis.sh /usr/local/bin
+
+ENV PGTBLSPC /var/lib/postgresql/pgtblspc
+VOLUME /var/lib/postgresql/pgtblspc
+
+COPY docker-entrypoint.sh /usr/local/bin/
