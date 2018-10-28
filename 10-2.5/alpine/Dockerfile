@@ -68,3 +68,4 @@ ENV PGTBLSPC /var/lib/postgresql/pgtblspc
 VOLUME /var/lib/postgresql/pgtblspc
 
 COPY docker-entrypoint.sh /usr/local/bin/
+RUN chomd +x /usr/local/bin/docker-entrypoint.sh
